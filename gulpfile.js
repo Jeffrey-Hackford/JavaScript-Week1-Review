@@ -36,7 +36,7 @@ gulp.task('jsBrowserify', ['concatInterface'], function(){
 gulp.task('concatInterface', function() {
   return gulp.src(['./js/*-interface.js'])
   .pipe(concat('allConcat.js'))
-  .pipe(gulp.dest('.tmp'));
+  .pipe(gulp.dest('tmp'));
 });
 
 gulp.task('build', ['clean'], function(){
@@ -66,13 +66,13 @@ gulp.task('bowerJS', function(){
   .pipe(gulp.dest('./build/js'));
 });
 gulp.task('bowerCSS', function(){
-  return gulp.src(liv.ext('css').files)
+  return gulp.src(lib.ext('css').files)
   .pipe(concat('vendor.css'))
   .pipe(gulp.dest('./build/css'));
 });
 
 gulp.task('serve', function(){
-  broswerSync.init({
+  browserSync.init({
     server: {
       baseDir: "./",
       index: "index.html"
