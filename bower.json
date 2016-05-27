@@ -1,9 +1,12 @@
 {
-  "name": "clock",
+  "name": "GitHubAPI",
   "description": "",
   "main": "gulpfile.js",
+  "authors": [
+    "Jeffrey Hackford' <jeffrey.hackford@gmail.com>"
+  ],
   "license": "ISC",
-  "homepage": "",
+  "homepage": "https://github.com/Jeffrey-Hackford/Gulp-Template",
   "ignore": [
     "**/.*",
     "node_modules",
