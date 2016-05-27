@@ -9,10 +9,12 @@
   </head>
   <body>
     <div class="container">
-      <h1 class="jumbotron">Welcome to GitHub search.</h1>
-      <label>Enter a Github user name to search for their repos</label>
-      <input id="userInput" type="text">
-      <button id="search"type="submit" class="btn btn-info">Search!</button>
+      <h1 class="jumbotron">Welcome to GitHub search</h1>
+      <div class="userForm">
+        <label>Enter a Github user name to search for their repos</label>
+        <input id="userInput" type="text">
+        <button id="search"type="submit" class="btn btn-info">Search!</button>
+      </div>
       <div>
         <h3 id="showUserName"></h3>
       </div>
@@ -21,6 +23,12 @@
       </div>
       <div id="hiddenFollowers" class="hidden">
         <h5><span id="showNameFollowers"></span>'s Github account has <span id="followers"></span></h5>
+      </div>
+      <div class="hidden">
+        <h5>Their repos include:</h5>
+        <ul id="showRepos">
+
+        </ul>
       </div>
     </div>
   </body>

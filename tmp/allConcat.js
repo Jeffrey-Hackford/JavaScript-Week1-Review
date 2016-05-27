@@ -9,7 +9,7 @@ $(document).ready(function(){
     var userInput = $('#userInput').val();
     $('#userInput').val("");
     $('#showUserName').text("The username, " + userInput + " has the following Github information:");
-    $('#hiddenFollowers').removeClass('hidden');
+    $('div').removeClass('hidden');
     gitHubObject.getRepos(userInput);
   });
 });

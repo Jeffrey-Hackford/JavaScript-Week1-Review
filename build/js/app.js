@@ -3,7 +3,6 @@ exports.apiKey = "1df715f27344d7211cd5e7d722c3cc4cfcd386ed";
 
 },{}],2:[function(require,module,exports){
 var apiKey = require('./../.env').apiKey;
-var repos = [];
 
 
 exports.Github = function(){
@@ -15,14 +14,13 @@ exports.Github.prototype.getRepos = function(userName){
     console.log(response);
     $('#showName').text("This user's name is: " + response.name);
     $('#showNameFollowers').text(response.name);
-    $('#followers').text(response.followers + " followers.");
-    // $('#showRepos').text('https://api.github.com/users/' + userName + '/repos')
+    $('#followers').text(response.followers + " followers!");
     $.get('https://api.github.com/users/' + userName + '/repos').then(function(response){
       console.log(response[0].name);
-      $.each(response, function(repo) {
-        repos.push("<li>" + repo + "</li>");
-      })
-      // console.log(repos);
+        for(i = 0; i < 30; i++) {
+          console.log(i);
+          $('#showRepos').append("<li>" + response[i].name + "</li>");
+        }
     });
   }).fail(function(error){
     console.log(error.responseJSON.message);
@@ -41,7 +39,7 @@ $(document).ready(function(){
     var userInput = $('#userInput').val();
     $('#userInput').val("");
     $('#showUserName').text("The username, " + userInput + " has the following Github information:");
-    $('#hiddenFollowers').removeClass('hidden');
+    $('div').removeClass('hidden');
     gitHubObject.getRepos(userInput);
   });
 });
