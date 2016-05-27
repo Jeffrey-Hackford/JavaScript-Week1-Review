@@ -14,7 +14,6 @@ exports.Github.prototype.getRepos = function(userName){
     $.get('https://api.github.com/users/' + userName + '/repos').then(function(response){
       console.log(response[0].name);
         for(i = 0; i < 30; i++) {
-          console.log(i);
           $('#showRepos').append("<li>" + response[i].name + "</li>");
         }
     });

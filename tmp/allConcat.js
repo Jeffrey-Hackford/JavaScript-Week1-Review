@@ -8,7 +8,7 @@ $(document).ready(function(){
   $('#search').click(function(){
     var userInput = $('#userInput').val();
     $('#userInput').val("");
-    $('#showUserName').text("The username, " + userInput + " has the following Github information:");
+    $('#showUserName').text("The username, " + userInput + ", has the following Github information:");
     $('div').removeClass('hidden');
     gitHubObject.getRepos(userInput);
   });

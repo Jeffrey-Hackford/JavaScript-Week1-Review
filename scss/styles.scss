@@ -1,7 +1,17 @@
+$lightblue : #80ccff;
+
 .hidden {
   display: none
 }
 
 h1, .userForm {
   text-align: center;
+}
+
+.mascot {
+  margin-top: 100px;
+}
+
+body {
+  background: $lightblue;
 }
