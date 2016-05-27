@@ -12,6 +12,7 @@ $(document).ready(function(){
     $('#showResults').text("The username, " + userInput + " has the following repos:");
     console.log(userInput);
     gitHubObject.getRepos(userInput);
+    
 
   });
 });
