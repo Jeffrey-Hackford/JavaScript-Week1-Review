@@ -10,9 +10,6 @@ $(document).ready(function(){
     $('#userInput').val("");
     $('#showUserName').text("The username, " + userInput + " has the following Github information:");
     $('#hiddenFollowers').removeClass('hidden');
-    console.log(userInput);
     gitHubObject.getRepos(userInput);
-
-
   });
 });
