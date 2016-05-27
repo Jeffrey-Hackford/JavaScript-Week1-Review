@@ -11,8 +11,10 @@ exports.Github = function(){
 
 exports.Github.prototype.getRepos = function(userName){
   $.get('https://api.github.com/users/' + userName + '?access_token=' + apiKey).then(function(response){
-    console.log(response.name);
-    $('#showResults').text("")
+    console.log(response);
+    $('#showName').text(response.name);
+    $('#followers').text(response.followers + "followers.");
+
   }).fail(function(error){
     console.log(error.responseJSON.message);
   });
@@ -24,16 +26,16 @@ var Github = require('./../js/github.js').Github;
 
 
 $(document).ready(function(){
+  var gitHubObject = new Github();
 
   $('#search').click(function(){
-    var gitHubObject = new Github();
-
     var userInput = $('#userInput').val();
     $('#userInput').val("");
-    $('#showResults').text("The username, " + userInput + " has the following repos:");
+    $('#showUserName').text("The username, " + userInput + " has the following Github information:");
+    $('#hiddenFollowers').removeClass('hidden');
     console.log(userInput);
     gitHubObject.getRepos(userInput);
-    
+
 
   });
 });
