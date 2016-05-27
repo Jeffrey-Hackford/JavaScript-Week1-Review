@@ -9,32 +9,34 @@
   </head>
   <body>
     <div class="container">
-      <h1 class="jumbotron">Welcome to GitHub search</h1>
-      <div class="userForm">
-        <label>Enter a Github user name to search for their repos</label>
-        <input id="userInput" type="text">
-        <button id="search"type="submit" class="btn btn-success">Search!</button>
-      </div>
-      <div>
-        <h3 id="showUserName"></h3>
-      </div>
-      <div>
-        <h5 id="showName"></h5>
-      </div>
-      <div id="hiddenFollowers" class="hidden">
-        <h5><span id="showNameFollowers"></span>'s Github account has <span id="followers"></span></h5>
-      </div>
-      <div class="hidden row">
-        <div class="col-xs-3 col-xs-offset-1">
-          <h5>Their repos include:</h5>
-          <ul id="showRepos">
+      <h1 class="jumbotron">Welcome to GitHub Search</h1>
+        <div class="userForm">
+          <label>Enter a Github user name to search for their repos</label>
+          <input id="userInput" type="text">
+          <button id="search"type="submit" class="btn btn-success">Search!</button>
+        </div>
+        <div class="outerBorder hidden">
+          <div>
+            <h3 id="showUserName"></h3>
+          </div>
+          <div>
+            <h5 id="showName"></h5>
+          </div>
+          <div id="hiddenFollowers" class="hidden">
+            <h5><span id="showNameFollowers"></span>'s Github account has <span id="followers"></span></h5>
+          </div>
+          <div class="hidden row">
+            <div class="col-xs-3 col-xs-offset-1">
+              <h5>Their repos include:</h5>
+              <ul id="showRepos">
 
-          </ul>
-        </div>
-        <div class="col-xs-5 col-xs-offset-2 mascot">
-          <img src="http://fiouch.com/wp-content/uploads/2014/10/labtocat-afa1e0d17bc481d5d0b82030cac8bd7a.png" alt="github mascot">
+              </ul>
+            </div>
+            <div class="col-xs-3 col-xs-offset-2 mascot">
+              <img src="http://fiouch.com/wp-content/uploads/2014/10/labtocat-afa1e0d17bc481d5d0b82030cac8bd7a.png" alt="github mascot">
+            </div>
+          </div>
         </div>
       </div>
-    </div>
   </body>
 </html>

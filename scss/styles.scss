@@ -1,4 +1,18 @@
 $lightblue : #80ccff;
+$brown : #e67300;
+$teal : #0fc;
+
+.outerBorder {
+  border: 2px solid white;
+  background-color: $teal;
+  border-radius: 3em;
+  padding: 15px 15px 15px 15px;
+  margin-top: 10px;
+}
+
+.jumbotron {
+  background-color: $teal;
+}
 
 .hidden {
   display: none
@@ -8,8 +22,14 @@ h1, .userForm {
   text-align: center;
 }
 
-.mascot {
-  margin-top: 100px;
+img {
+  padding: 30px 30px 30px 30px;
+  margin-right: 20px;
+  margin-top: 125px;
+  border: 4px solid $brown;
+  border-radius: 5em;
+  margin-right: 20px;
+  background-color: $lightblue;
 }
 
 body {
